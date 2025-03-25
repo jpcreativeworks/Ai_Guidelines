@@ -1,0 +1,202 @@
+/* General Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* TUSD Header Style */
+#topNavBar {
+  background-color: #9E1B21;
+  color: white;
+  padding: 10px;
+}
+
+#topNavBar .nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+#topNavBar .nav-menu li {
+  margin-left: 20px;
+}
+
+#topNavBar .nav-menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+#topNavBar .nav-menu li a:hover {
+  background-color: yellow;
+  color: black;
+}
+
+/* Main Header with Logo and Search */
+.rowsHeader {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid red;
+}
+
+.rowsHeader img {
+  max-height: 90px;
+}
+
+#search-input,
+#submit-search {
+  padding: 5px;
+  margin-left: 5px;
+}
+
+#submit-search {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+/* aiGuideHeader with background image */
+#aiGuideHeader {
+  background-image: url('https://www.microsoft.com/en-us/research/wp-content/uploads/2023/03/AI_Microsoft_Research_Header_1920x720-240x90.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#ai-guidelines-title {
+  color: white;
+  font-size: 2rem;
+}
+
+#aiGuideHeader img {
+  max-height: 80px;
+}
+
+/* Main container layout - two clear columns */
+#info-container {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+/* Left Column: Expandable menus */
+#guidlines-definitions-container {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.guidlinesItemTitle,
+.staffItemTitle,
+.regulationsItemTitle,
+.administrationItemTitle {
+  cursor: pointer;
+  padding: 10px;
+  background: #f4f4f4;
+  margin-top: 5px;
+  position: relative;
+}
+
+.guidlinesItemTitle::before,
+.staffItemTitle::before,
+.regulationsItemTitle::before,
+.administrationItemTitle::before {
+  content: "+";
+  position: absolute;
+  left: 10px;
+}
+
+.guidlinesItemTitle.active::before,
+.staffItemTitle.active::before,
+.regulationsItemTitle.active::before,
+.administrationItemTitle.active::before {
+  content: "-";
+}
+
+.guidlinesItemTitle ul,
+.staffItemTitle ul,
+.regulationsItemTitle ul,
+.administrationItemTitle ul {
+  display: none;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.guidlinesItemTitle.active ul,
+.staffItemTitle.active ul,
+.regulationsItemTitle.active ul,
+.administrationItemTitle.active ul {
+  display: block;
+}
+
+/* Right Column: definitions-container clearly structured */
+#definitions-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#purpose-scope-container,
+#evaluation-and-monitoring-container {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#purpose,
+#scope,
+#definitions,
+.evaluatingAndMonitoring,
+.reverancesLinks {
+  width: 50%;
+  padding: 10px;
+}
+
+#definitions-container #ai-scope-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  #info-container {
+    flex-direction: column;
+  }
+
+  #guidlines-definitions-container,
+  #definitions-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .rowsHeader,
+  #topNavBar .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rowsHeader img,
+  #aiGuideHeader img {
+    margin-bottom: 10px;
+  }
+
+  #aiGuideHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+}
