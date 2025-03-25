@@ -87,12 +87,15 @@
   display: flex;
   flex-direction: row;
   margin: 20px;
+  gap: 40px;
+  align-items: flex-start;
 }
 
 /* Left Column: Expandable menus */
 #guidlines-definitions-container {
   width: 50%;
-  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .guidlinesItemTitle,
@@ -100,25 +103,29 @@
 .regulationsItemTitle,
 .administrationItemTitle {
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 40px 10px 10px;
   background: #f4f4f4;
   margin-top: 5px;
   position: relative;
 }
 
-.guidlinesItemTitle::before,
-.staffItemTitle::before,
-.regulationsItemTitle::before,
-.administrationItemTitle::before {
+.guidlinesItemTitle::after,
+.staffItemTitle::after,
+.regulationsItemTitle::after,
+.administrationItemTitle::after {
   content: "+";
   position: absolute;
-  left: 10px;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.guidlinesItemTitle.active::before,
-.staffItemTitle.active::before,
-.regulationsItemTitle.active::before,
-.administrationItemTitle.active::before {
+.guidlinesItemTitle.active::after,
+.staffItemTitle.active::after,
+.regulationsItemTitle.active::after,
+.administrationItemTitle.active::after {
   content: "-";
 }
 
@@ -199,4 +206,4 @@
     flex-direction: column;
     text-align: center;
   }
-}
+} 
