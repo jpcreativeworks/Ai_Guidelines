@@ -108,6 +108,42 @@
   margin-top: 5px;
   position: relative;
 }
+.guidlinesTitle,
+.staffTitle,
+.regulationsTitle,
+.administrationTitle,
+.guidlinesItemTitle,
+.staffItemTitle,
+.regulationsItemTitle,
+.administrationItemTitle {
+  list-style-type: none;
+}
+.guidlinesTitle,
+.staffTitle,
+.regulationsTitle,
+.administrationTitle {
+  font-size: large;
+  font-weight: bold;
+  padding: 10px 0;
+  list-style-type: none;
+}
+.guidlinesItemTitle,
+.staffItemTitle,
+.regulationsItemTitle,
+.administrationItemTitle {
+  font-size: medium;
+  font-weight: lighter;
+  list-style: none;
+}
+.guidlinesdef,
+.staffDef,
+.regulationsDef,
+.administrationDef {
+  list-style-type: circle;
+  list-style-position: inside; /* optional for better alignment */
+  padding-left: 1.5em;         /* optional for spacing if bullets still don't appear */
+  display: list-item;          /* forces the element to behave like a list item */
+}
 
 .guidlinesItemTitle::after,
 .staffItemTitle::after,
@@ -128,21 +164,22 @@
 .administrationItemTitle.active::after {
   content: "-";
 }
-
+/* Smooth transition for expanding sections */
 .guidlinesItemTitle ul,
 .staffItemTitle ul,
 .regulationsItemTitle ul,
 .administrationItemTitle ul {
-  display: none;
-  padding-left: 20px;
-  margin-top: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
+/* When active, expand smoothly */
 .guidlinesItemTitle.active ul,
 .staffItemTitle.active ul,
 .regulationsItemTitle.active ul,
 .administrationItemTitle.active ul {
-  display: block;
+  max-height: 500px; /* Adjust based on your content size */
 }
 
 /* Right Column: definitions-container with card layout */
@@ -222,5 +259,7 @@
     width: 100%;
   }
 }
+
+
 /*  background-image: url('https://www.microsoft.com/en-us/research/wp-content/uploads/2023/03/AI_Microsoft_Research_Header_1920x720-240x90.png');
 */
