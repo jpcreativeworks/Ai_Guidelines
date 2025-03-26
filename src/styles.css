@@ -216,6 +216,7 @@
 p {
   padding: 5px;
 }
+
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -277,6 +278,7 @@ p {
   align-items: center;
   justify-content: center;
   height: 100%;
+  margin: auto;
 }
 
 #ai-scope-image img {
@@ -341,7 +343,7 @@ p {
 /* Responsive Adjustments */
 @media (max-width: 767px) {
   #info-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   #guidlines-definitions-container,
