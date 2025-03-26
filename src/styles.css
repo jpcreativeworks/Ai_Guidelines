@@ -189,7 +189,7 @@
 
 .carousel-card {
   background-color: #f0f0f0;
-  border: 2px solid purple;
+  border: 2px solid #adf5f9;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 20px;
@@ -213,6 +213,9 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+p {
+  padding: 5px;
+}
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -269,7 +272,20 @@
   display: block;
 }
 
+#ai-scope-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 
+#ai-scope-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
 
 /* Inner layout for purpose-scope-container */
 #purpose-scope-container {
