@@ -205,7 +205,7 @@
   background-color: #f0f0f0;
   padding: 20px;
   border-radius: 8px;
-  border: 2px solid #b8a6dd;
+  border: 2px solid #adf5f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -224,7 +224,9 @@
 }
 
 #purpose,
-#scope {
+#scope,
+#evaluation-and-monitoring-container,
+#referances-container {
   width: 50%;
   padding: 10px;
 }
@@ -241,6 +243,29 @@
 
 #definitions li {
   margin-bottom: 8px;
+}
+
+#monitoring-references-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #b8a6dd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  /*flex-direction: column;*/
+  gap: 20px;
+}
+
+.reverancesLinks a {
+  color: navy;
+}
+
+.reverancesLinks a:hover {
+  color: #b8a6dd;
+}
+
+.reverancesLinks a:visited {
+  color: purple;
 }
 
 /* Responsive Adjustments */
