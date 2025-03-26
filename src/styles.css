@@ -34,7 +34,7 @@
 }
 
 #topNavBar .nav-menu li a:hover {
-  background-color: yellow;
+  background-color: #ffcd30;
   color: black;
 }
 
@@ -352,17 +352,6 @@ p {
   margin-bottom: 8px;
 }
 
-/*#monitoring-references-container {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 8px;
-  border: 2px solid #b8a6dd;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}*/
-
 #evaluation-and-monitoring-container,
 #references-container {
   flex: 1 1 100%;
@@ -388,6 +377,48 @@ p {
 
 .reverancesLinks a:visited {
   color: purple;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffcd30;
+}
+
+footer a {
+  color: #ffcd30;
 }
 
 /* Responsive Adjustments */
