@@ -290,7 +290,7 @@ p {
 }
 
 /* Inner layout for purpose-scope-container */
-#purpose-scope-container {
+#purpose-scope-container, #monitoring-references-container {
   display: flex;
   gap: 20px;
 }
@@ -299,7 +299,6 @@ p {
 #scope,
 #evaluation-and-monitoring-container,
 #referances-container {
-  width: 50%;
   padding: 10px;
 }
 
@@ -317,7 +316,7 @@ p {
   margin-bottom: 8px;
 }
 
-#monitoring-references-container {
+/*#monitoring-references-container {
   background-color: #f0f0f0;
   padding: 20px;
   border-radius: 8px;
@@ -326,12 +325,12 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-}
+}*/
 
 #evaluation-and-monitoring-container,
 #references-container {
   flex: 1 1 100%;
-  /*min-width: 300px;*/
+  width: 50%;
   box-sizing: border-box; 
 }
 
@@ -356,6 +355,7 @@ p {
 }
 
 /* Responsive Adjustments */
+
 @media (max-width: 767px) {
   #info-container {
     flex-direction: column-reverse;
@@ -388,7 +388,9 @@ p {
   }
 
   #purpose,
-  #scope {
+  #scope,
+  #evaluation-and-monitoring-container,
+  #references-container {
     width: 100%;
   }
 
@@ -397,16 +399,12 @@ p {
     width: 100%;
   }
 
-  #evaluation-and-monitoring-container,
-  #references-container {
-    width: 100%; /* Ensure full width on mobile */
-  }
-
   #evaluation-and-monitoring-container {
     min-width: 0;
   }
 
 }
+
 
 
 /*  background-image: url('https://www.microsoft.com/en-us/research/wp-content/uploads/2023/03/AI_Microsoft_Research_Header_1920x720-240x90.png');
