@@ -1,11 +1,25 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const expandableItems = document.querySelectorAll(
-    '.guidlinesItemTitle, .staffItemTitle, .regulationsItemTitle, .administrationItemTitle'
-  );
+document.addEventListener("DOMContentLoaded", function () {
+  // Expand General Guidelines items
+  const generalItems = document.querySelectorAll(".generalGuidlines .guidlinesItemTitle");
+  generalItems.forEach((item) => {
+    item.classList.add("active");
+  });
 
-  expandableItems.forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('active');
+  // ensure others stay collapsed 
+  const otherSections = document.querySelectorAll(
+    ".staffItemTitle, .regulationsItemTitle, .administrationItemTitle"
+  );
+  otherSections.forEach((item) => {
+    item.classList.remove("active");
+  });
+
+  // toggle click functionality
+  const allToggles = document.querySelectorAll(
+    ".guidlinesItemTitle, .staffItemTitle, .regulationsItemTitle, .administrationItemTitle"
+  );
+  allToggles.forEach((item) => {
+    item.addEventListener("click", function () {
+      this.classList.toggle("active");
     });
   });
 });
