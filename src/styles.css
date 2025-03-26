@@ -324,8 +324,23 @@ p {
   border: 2px solid #b8a6dd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  /*flex-direction: column;*/
+  flex-wrap: wrap;
   gap: 20px;
+}
+
+#evaluation-and-monitoring-container,
+#references-container {
+  flex: 1 1 100%;
+  /*min-width: 300px;*/
+  box-sizing: border-box; 
+}
+
+#references-container ul {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .reverancesLinks a {
@@ -376,6 +391,21 @@ p {
   #scope {
     width: 100%;
   }
+
+  #monitoring-references-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #evaluation-and-monitoring-container,
+  #references-container {
+    width: 100%; /* Ensure full width on mobile */
+  }
+
+  #evaluation-and-monitoring-container {
+    min-width: 0;
+  }
+
 }
 
 
