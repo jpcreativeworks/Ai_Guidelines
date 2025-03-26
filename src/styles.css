@@ -3,7 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  /*font-family: Arial, sans-serif;*/
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  /*font-weight: <weight>;*/
+  font-style: normal;
 }
 
 /* TUSD Header Style */
@@ -63,7 +67,7 @@
 
 /* aiGuideHeader with background image */
 #aiGuideHeader {
-  background-image: url('https://www.microsoft.com/en-us/research/wp-content/uploads/2023/03/AI_Microsoft_Research_Header_1920x720-240x90.png');
+  background-image: url('https://www.microsoft.com/en-us/research/wp-content/uploads/2023/03/AI_Microsoft_Research_Header_1920x720.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -75,7 +79,7 @@
 
 #ai-guidelines-title {
   color: white;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 #aiGuideHeader img {
@@ -107,6 +111,7 @@
   background: #f4f4f4;
   margin-top: 5px;
   position: relative;
+  border-radius: 4px;
 }
 .guidlinesTitle,
 .staffTitle,
@@ -183,6 +188,12 @@
 }
 
 /* Right Column: definitions-container with card layout */
+.titleLine {
+  border: none;
+  border-top: 2px solid navy;
+  margin: 10px 0;
+}
+
 #definitions-container {
   width: 50%;
   display: flex;
@@ -194,6 +205,7 @@
   background-color: #f0f0f0;
   padding: 20px;
   border-radius: 8px;
+  border: 2px solid #b8a6dd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -220,6 +232,15 @@
 #definitions {
   width: 100%;
   padding: 10px 0;
+}
+
+#definitions ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+#definitions li {
+  margin-bottom: 8px;
 }
 
 /* Responsive Adjustments */
