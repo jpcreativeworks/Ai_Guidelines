@@ -48,3 +48,25 @@ document.querySelector('.next').addEventListener('click', () => {
   currentImage = (currentImage + 1) % images.length;
   imageElement.src = images[currentImage];
 });
+
+// Enlarge Image 
+const modal = document.getElementById("imageModal");
+  const img = document.getElementById("aiScopeThumbnail");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = document.querySelector(".close");
+
+  img.onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  };
+
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // Optional: click anywhere outside image to close
+  modal.onclick = function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  };
