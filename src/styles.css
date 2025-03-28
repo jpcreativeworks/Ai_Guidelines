@@ -9,6 +9,13 @@
 }
 
 /* TUSD Header Style */
+#topNavBar, 
+#topNavBar .nav-menu, 
+#topNavBar .nav-menu li a,
+#topNavBar .nav-menu li ul li a {
+  font-family: Arial, sans-serif;
+}
+
 #topNavBar {
   background-color: #9E1B21;
   color: white;
@@ -38,7 +45,7 @@
   white-space: nowrap;
 }
 
-#topNavBar .nav-menu li:first-child a {
+#topNavBar .nav-menu > li:first-child > a {
   background-color: #ffcd30;
   color: black;
 }
@@ -46,6 +53,42 @@
 #topNavBar .nav-menu li a:hover {
   background-color: #e0e0e0;
   color: black;
+}
+
+/* Submenu Styles */
+#topNavBar .nav-menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e0e0e0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 220px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+#topNavBar .nav-menu li:hover ul {
+  display: block;
+}
+
+#topNavBar .nav-menu li ul li a {
+  color: black;
+  background-color: #e0e0e0;
+  padding: 10px 20px;
+}
+
+#topNavBar .nav-menu li ul li a:hover {
+  background-color: #d0d0d0;
+}
+
+/* Ensure nav menu takes full width of each item on hover */
+#topNavBar .nav-menu li a,
+#topNavBar .nav-menu li ul li a {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Main Header with Logo and Search */
@@ -482,6 +525,19 @@ footer a {
 /* Responsive Adjustments */
 
 @media (max-width: 767px) {
+  #topNavBar .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #topNavBar .nav-menu li {
+    width: 100%;
+  }
+
+  #topNavBar .nav-menu li a {
+    text-align: center;
+  }
+
   #info-container {
     flex-direction: column-reverse;
   }
