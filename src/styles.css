@@ -3,10 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /*font-family: Arial, sans-serif;*/
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  /*font-weight: <weight>;*/
   font-style: normal;
 }
 
@@ -14,27 +12,39 @@
 #topNavBar {
   background-color: #9E1B21;
   color: white;
-  padding: 10px;
 }
 
 #topNavBar .nav-menu {
   display: flex;
   justify-content: flex-end;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 #topNavBar .nav-menu li {
   margin-left: 20px;
+  position: relative;
 }
 
 #topNavBar .nav-menu li a {
-  color: white;
+  display: block;
+  padding: 7px 20px;
   text-decoration: none;
-  padding: 5px;
+  color: white;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+#topNavBar .nav-menu li:first-child a {
+  background-color: #ffcd30;
+  color: black;
 }
 
 #topNavBar .nav-menu li a:hover {
-  background-color: #ffcd30;
+  background-color: #e0e0e0;
   color: black;
 }
 
