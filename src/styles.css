@@ -338,6 +338,54 @@ p {
   padding: 10px;
 }
 
+/* Tabs container styling */
+.tab-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #adf5f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Tab buttons */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tab-button {
+  padding: 8px 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #dbe9ff;
+}
+
+.tab-button.active {
+  background-color: #b8a6dd;
+  color: white;
+  border-color: #b8a6dd;
+}
+
+/* Tab content areas */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
 #definitions {
   width: 100%;
   padding: 10px 0;
@@ -471,7 +519,10 @@ footer a {
   }
 
 }
-
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 
 /*  background-image: url('https://www.microsoft.com/en-us/research/wp-content/uploads/2023/03/AI_Microsoft_Research_Header_1920x720-240x90.png');
