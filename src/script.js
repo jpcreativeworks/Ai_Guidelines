@@ -1,3 +1,13 @@
+//navbar mobile hamberger
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.getElementById('nav-toggle');
+  const navMenu = document.querySelector('#topNavBar .nav-menu');
+
+  toggle.addEventListener('click', function () {
+    navMenu.classList.toggle('active');
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   // Expand General Guidelines items
   const generalItems = document.querySelectorAll(".generalGuidlines .guidlinesItemTitle");
